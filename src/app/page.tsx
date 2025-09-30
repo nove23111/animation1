@@ -272,13 +272,21 @@ export default function Home() {
               whileHover={{ scale: 1.05, zIndex: 30 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 w-64 shadow-xl hover:shadow-2xl hover:border-blue-500/50 transition-all duration-300">
+              <div
+                className="p-4 w-64 shadow-xl hover:shadow-2xl transition-all duration-300"
+                style={{
+                  borderRadius: "8px",
+                  border: "1px solid rgba(255, 255, 255, 0.05)",
+                  background: "rgba(255, 255, 255, 0.10)",
+                  backdropFilter: "blur(7.5px)"
+                }}
+              >
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
-                    <img 
-                      src={project.img_url} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover" 
+                    <img
+                      src={project.img_url}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="text-white font-semibold text-sm">{project.title}</h3>
