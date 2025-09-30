@@ -9,6 +9,7 @@ interface ProjectCard {
   title: string
   description: string
   url: string
+  img_url?: string
   position: {
     x: number
     y: number
@@ -22,6 +23,7 @@ const projects: ProjectCard[] = [
     title: 'Ripple',
     description: 'Modernize your financial infrastructure with Ripple',
     url: 'https://ripple.com',
+    img_url: '',
     position: { x: -150, y: -150 },
     orbit: 'inner'
   },
@@ -30,6 +32,7 @@ const projects: ProjectCard[] = [
     title: 'FutureVerse',
     description: 'We power global brands to create content that moves',
     url: 'https://futureverse.com',
+    img_url: '',
     position: { x: 150, y: -150 },
     orbit: 'inner'
   },
@@ -38,6 +41,7 @@ const projects: ProjectCard[] = [
     title: 'XAO DAO',
     description: 'The world\'s first Decentralized Autonomous Organization for the XRP Ledger',
     url: 'https://xaodao.com',
+    img_url: '',
     position: { x: 150, y: 150 },
     orbit: 'inner'
   },
@@ -46,6 +50,7 @@ const projects: ProjectCard[] = [
     title: 'Xaman',
     description: 'The Leading Self-Custody Wallet. Secure Your XRP with Confidence',
     url: 'https://xaman.app',
+    img_url: '',
     position: { x: -150, y: 150 },
     orbit: 'inner'
   },
@@ -54,6 +59,7 @@ const projects: ProjectCard[] = [
     title: 'Flare Network',
     description: 'DeFi, smart contracts, and seamless multi-chain blockchain interoperability',
     url: 'https://flare.network',
+    img_url: '',
     position: { x: -250, y: 0 },
     orbit: 'outer'
   },
@@ -62,6 +68,7 @@ const projects: ProjectCard[] = [
     title: 'XRP Toolkit',
     description: 'Manage your XRPL crypto assets with ease',
     url: 'https://xrptoolkit.com',
+    img_url: '',
     position: { x: 250, y: 0 },
     orbit: 'outer'
   },
@@ -70,6 +77,7 @@ const projects: ProjectCard[] = [
     title: 'Digital Wealth Partners',
     description: 'Unlock the Future of Wealth with Digital Assets',
     url: 'https://digitalwealthpartners.com',
+    img_url: '',
     position: { x: 0, y: -250 },
     orbit: 'outer'
   },
@@ -78,6 +86,7 @@ const projects: ProjectCard[] = [
     title: 'SpendTheBits',
     description: 'Seamless, secure, instant cross-currency payment solution',
     url: 'https://spendthebits.com',
+    img_url: '',
     position: { x: 0, y: 250 },
     orbit: 'outer'
   }
@@ -261,8 +270,12 @@ export default function Home() {
             >
               <div className="bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 w-64 shadow-xl hover:shadow-2xl hover:border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                    <X className="w-4 h-4 text-white" strokeWidth={2} />
+                  <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+                    <img 
+                      src={project.img_url} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                   <h3 className="text-white font-semibold text-sm">{project.title}</h3>
                 </div>
