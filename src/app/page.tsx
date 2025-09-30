@@ -23,7 +23,7 @@ const projects: ProjectCard[] = [
     title: 'XAO DAO',
     description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
     url: '',
-    img_url: 'public/XRP/XAO DAO.png',
+    img_url: '/XRP/XAO DAO.png',
     position: { x: -150, y: -150 },
     orbit: 'inner'
   },
