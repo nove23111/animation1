@@ -420,39 +420,6 @@ export default function Home() {
             </motion.div>
           )
         })}
-
-        {/* Connecting Lines (Outside rotation container) */}
-        {showCards && getCurrentCards().map((project) => {
-          const rotatedPos = getRotatedPosition(project.position, rotation)
-          return (
-            <svg
-              key={`line-${currentCardSet}-${project.id}`}
-              className="absolute inset-0 w-full h-full pointer-events-none"
-              style={{ zIndex: 5 }}
-            >
-              <motion.line
-                x1="50%"
-                y1="50%"
-                x2={`calc(50% + ${rotatedPos.x}px)`}
-                y2={`calc(50% + ${rotatedPos.y}px)`}
-                stroke="rgba(59, 130, 246, 0.2)"
-                strokeWidth="1"
-                strokeDasharray="5,5"
-                initial={{ pathLength: 0 }}
-                animate={{ 
-                  pathLength: cardsTransitioning ? [1, 0.3, 0] : 1,
-                  opacity: cardsTransitioning ? [1, 0.3, 0] : 1
-                }}
-                transition={{ 
-                  duration: cardsTransitioning ? 1 : 1, 
-                  delay: cardsTransitioning ? 0 : 2.5,
-                  ease: "easeInOut",
-                  times: cardsTransitioning ? [0, 0.5, 1] : undefined
-                }}
-              />
-            </svg>
-          )
-        })}
       </div>
     </div>
   )
