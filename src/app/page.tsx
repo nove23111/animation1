@@ -8,7 +8,7 @@ interface ProjectCard {
   id: string
   title: string
   description: string
-  url: string
+  url?: string
   img_url?: string
   position: {
     x: number
@@ -19,74 +19,74 @@ interface ProjectCard {
 
 const projects: ProjectCard[] = [
   {
-    id: 'ripple',
-    title: 'Ripple',
-    description: 'Modernize your financial infrastructure with Ripple',
-    url: 'https://ripple.com',
-    img_url: '',
-    position: { x: -150, y: -150 },
-    orbit: 'inner'
-  },
-  {
-    id: 'futureverse',
-    title: 'FutureVerse',
-    description: 'We power global brands to create content that moves',
-    url: 'https://futureverse.com',
-    img_url: '',
-    position: { x: 150, y: -150 },
-    orbit: 'inner'
-  },
-  {
     id: 'xao-dao',
     title: 'XAO DAO',
-    description: 'The world\'s first Decentralized Autonomous Organization for the XRP Ledger',
-    url: 'https://xaodao.com',
-    img_url: '',
-    position: { x: 150, y: 150 },
-    orbit: 'inner'
-  },
-  {
-    id: 'xaman',
-    title: 'Xaman',
-    description: 'The Leading Self-Custody Wallet. Secure Your XRP with Confidence',
-    url: 'https://xaman.app',
-    img_url: '',
-    position: { x: -150, y: 150 },
+    description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
+    url: '',
+    img_url: 'public/XRP/XAO DAO.png',
+    position: { x: -150, y: -150 },
     orbit: 'inner'
   },
   {
     id: 'flare-network',
     title: 'Flare Network',
-    description: 'DeFi, smart contracts, and seamless multi-chain blockchain interoperability',
-    url: 'https://flare.network',
-    img_url: '',
+    description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
+    url: '',
+    img_url: 'public/XRP/Flare Network.png',
+    position: { x: 150, y: -150 },
+    orbit: 'inner'
+  },
+  {
+    id: 'future-verse',
+    title: 'FutureVerse',
+    description: 'We power global brands to create content that moves',
+    url: '',
+    img_url: 'public/XRP/FutureVerse.png',
+    position: { x: 150, y: 150 },
+    orbit: 'inner'
+  },
+  {
+    id: 'ripple',
+    title: 'Ripple',
+    description: 'Modernize your financial infrastructure with Ripple',
+    url: '',
+    img_url: 'public/XRP/Ripple.png',
+    position: { x: -150, y: 150 },
+    orbit: 'inner'
+  },
+  {
+    id: 'xao-dao-1',
+    title: 'XAO DAO',
+    description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
+    url: '',
+    img_url: 'public/XRP/XAO DAO.png',
     position: { x: -250, y: 0 },
     orbit: 'outer'
   },
   {
-    id: 'xrp-toolkit',
-    title: 'XRP Toolkit',
-    description: 'Manage your XRPL crypto assets with ease',
-    url: 'https://xrptoolkit.com',
-    img_url: '',
+    id: 'flare-network-1',
+    title: 'Flare Network',
+    description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
+    url: '',
+    img_url: 'public/XRP/Flare Network.png',
     position: { x: 250, y: 0 },
     orbit: 'outer'
   },
   {
-    id: 'digital-wealth',
-    title: 'Digital Wealth Partners',
-    description: 'Unlock the Future of Wealth with Digital Assets',
-    url: 'https://digitalwealthpartners.com',
-    img_url: '',
+    id: 'future-verse-1',
+    title: 'FutureVerse',
+    description: 'We power global brands to create content that moves',
+    url: '',
+    img_url: 'public/XRP/FutureVerse.png',
     position: { x: 0, y: -250 },
     orbit: 'outer'
   },
   {
-    id: 'spend-the-bits',
-    title: 'SpendTheBits',
-    description: 'Seamless, secure, instant cross-currency payment solution',
-    url: 'https://spendthebits.com',
-    img_url: '',
+    id: 'ripple-1',
+    title: 'Ripple',
+    description: 'Modernize your financial infrastructure with Ripple',
+    url: '',
+    img_url: 'public/XRP/Ripple.png',
     position: { x: 0, y: 250 },
     orbit: 'outer'
   }
@@ -168,11 +168,15 @@ export default function Home() {
           className="relative z-20"
         >
           <motion.div
-            className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50"
+            className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50 overflow-hidden"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <X className="w-12 h-12 md:w-16 md:h-16 text-white" strokeWidth={3} />
+            <img 
+              src="/XRP/XRP.png" 
+              alt="XRP" 
+              className="w-full h-full object-cover" 
+            />
           </motion.div>
         </motion.div>
 
