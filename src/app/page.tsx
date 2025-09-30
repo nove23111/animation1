@@ -283,8 +283,17 @@ export default function Home() {
     flexDirection: "column",
     alignItems: "flex-start"
   }}
-  className="w-64 shadow-xl hover:shadow-2xl transition-all duration-300"
+  className="
 >
+<div
+  className="p-4 w-64 shadow-xl hover:shadow-2xl transition-all duration-300"
+  style={{
+    borderRadius: "8px",
+    border: "1px solid rgba(255, 255, 255, 0.05)",
+    background: "rgba(255, 255, 255, 0.10)",
+    backdropFilter: "blur(7.5px)"
+  }}
+  >
   <div className="flex items-center space-x-3 mb-3">
     <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
       <img
@@ -303,6 +312,7 @@ export default function Home() {
   <div className="mt-3 text-blue-400 text-xs font-medium">
     Click to visit →
   </div>
+</div
 </div>
             </motion.div>
           )
