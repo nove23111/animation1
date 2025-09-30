@@ -248,7 +248,7 @@ export default function Home() {
               {/* Circle 4: 744x744, blue blur */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
+                animate={{ scale: 1, opacity: 0.1 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 className="absolute rounded-full"
                 style={{
