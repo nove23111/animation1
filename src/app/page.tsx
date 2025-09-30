@@ -272,32 +272,38 @@ export default function Home() {
               whileHover={{ scale: 1.05, zIndex: 30 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div
-                className="p-4 w-64 shadow-xl hover:shadow-2xl transition-all duration-300"
-                style={{
-                  borderRadius: "8px",
-                  border: "1px solid rgba(255, 255, 255, 0.05)",
-                  background: "rgba(255, 255, 255, 0.10)",
-                  backdropFilter: "blur(7.5px)"
-                }}
-              >
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
-                    <img
-                      src={project.img_url}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-white font-semibold text-sm">{project.title}</h3>
-                </div>
-                <p className="text-gray-300 text-xs leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="mt-3 text-blue-400 text-xs font-medium">
-                  Click to visit →
-                </div>
-              </div>
+<div
+  style={{
+    borderRadius: "10px",
+    border: "1px solid rgba(255, 255, 255, 0.10)",
+    background: "rgba(255, 255, 255, 0.05)",
+    backdropFilter: "blur(12px)",
+    display: "flex",
+    padding: "4px",
+    flexDirection: "column",
+    alignItems: "flex-start"
+  }}
+  className="w-64 shadow-xl hover:shadow-2xl transition-all duration-300"
+>
+  <div className="flex items-center space-x-3 mb-3">
+    <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+      <img
+        src={project.img_url}
+        alt={project.title}
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <h3 className="text-white font-semibold text-sm">{project.title}</h3>
+  </div>
+
+  <p className="text-gray-300 text-xs leading-relaxed">
+    {project.description}
+  </p>
+
+  <div className="mt-3 text-blue-400 text-xs font-medium">
+    Click to visit →
+  </div>
+</div>
             </motion.div>
           )
         })}
