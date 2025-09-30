@@ -114,7 +114,7 @@ export default function Home() {
   const [showOrbits, setShowOrbits] = useState(false)
   const [showCards, setShowCards] = useState(false)
   const [rotation, setRotation] = useState(0)
-  const [currentCardSet, setCurrentCardSet] = useState(0) // 0 for first 4, 1 for second 4
+  const [currentCardSet, setCurrentCardSet] = useState(0) // 0 for first 5, 1 for second 4
   const [cardsTransitioning, setCardsTransitioning] = useState(false)
 
   useEffect(() => {
@@ -169,9 +169,9 @@ export default function Home() {
   // Get current set of cards to display
   const getCurrentCards = () => {
     if (currentCardSet === 0) {
-      return projects.slice(0, 4) // First 4 cards
+      return projects.slice(0, 5) // First 4 cards
     } else {
-      return projects.slice(4, 8) // Second 4 cards
+      return projects.slice(5, 9) // Second 4 cards
     }
   }
 
