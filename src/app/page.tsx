@@ -168,7 +168,7 @@ export default function Home() {
           className="relative z-20"
         >
           <motion.div
-            className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50 overflow-hidden"
+            className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center overflow-hidden"
             style={{
               boxShadow: "0 0 43.615px 0 rgba(255, 255, 255, 0.50) inset",
               filter: "drop-shadow(0 0 148.855px #056FFF)"
