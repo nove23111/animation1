@@ -242,9 +242,9 @@ export default function Home() {
                   width: "744px",
                   height: "744px",
                   flexShrink: 0,
-                  opacity: 0.1,
+                  opacity: 0.05,
                   background: "#056FFF",
-                  filter: "blur(100px)"
+                  filter: "blur(200px)"
                 }}
               />
             </>
