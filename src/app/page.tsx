@@ -32,7 +32,7 @@ const projects: ProjectCard[] = [
     title: 'Flare Network',
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
     url: '',
-    img_url: 'public/XRP/Flare Network.png',
+    img_url: '/XRP/Flare Network.png',
     position: { x: 150, y: -150 },
     orbit: 'inner'
   },
@@ -41,7 +41,7 @@ const projects: ProjectCard[] = [
     title: 'FutureVerse',
     description: 'We power global brands to create content that moves',
     url: '',
-    img_url: 'public/XRP/FutureVerse.png',
+    img_url: '/XRP/FutureVerse.png',
     position: { x: 150, y: 150 },
     orbit: 'inner'
   },
@@ -50,7 +50,7 @@ const projects: ProjectCard[] = [
     title: 'Ripple',
     description: 'Modernize your financial infrastructure with Ripple',
     url: '',
-    img_url: 'public/XRP/Ripple.png',
+    img_url: '/XRP/Ripple.png',
     position: { x: -150, y: 150 },
     orbit: 'inner'
   },
@@ -59,7 +59,7 @@ const projects: ProjectCard[] = [
     title: 'XAO DAO',
     description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
     url: '',
-    img_url: 'public/XRP/XAO DAO.png',
+    img_url: '/XRP/XAO DAO.png',
     position: { x: -250, y: 0 },
     orbit: 'outer'
   },
@@ -68,7 +68,7 @@ const projects: ProjectCard[] = [
     title: 'Flare Network',
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
     url: '',
-    img_url: 'public/XRP/Flare Network.png',
+    img_url: '/XRP/Flare Network.png',
     position: { x: 250, y: 0 },
     orbit: 'outer'
   },
@@ -77,7 +77,7 @@ const projects: ProjectCard[] = [
     title: 'FutureVerse',
     description: 'We power global brands to create content that moves',
     url: '',
-    img_url: 'public/XRP/FutureVerse.png',
+    img_url: '/XRP/FutureVerse.png',
     position: { x: 0, y: -250 },
     orbit: 'outer'
   },
@@ -86,7 +86,7 @@ const projects: ProjectCard[] = [
     title: 'Ripple',
     description: 'Modernize your financial infrastructure with Ripple',
     url: '',
-    img_url: 'public/XRP/Ripple.png',
+    img_url: '/XRP/Ripple.png',
     position: { x: 0, y: 250 },
     orbit: 'outer'
   }
