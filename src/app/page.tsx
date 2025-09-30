@@ -24,7 +24,7 @@ const projects: ProjectCard[] = [
     description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
     url: '',
     img_url: '/XRP/XAO DAO.png',
-    position: { x: -150, y: -150 },
+    position: { x: 150, y: 0 },
     orbit: 'inner'
   },
   {
@@ -33,7 +33,7 @@ const projects: ProjectCard[] = [
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
     url: '',
     img_url: '/XRP/Flare Network.png',
-    position: { x: 150, y: -150 },
+    position: { x: 46.35, y: 142.7 },
     orbit: 'inner'
   },
   {
@@ -42,7 +42,7 @@ const projects: ProjectCard[] = [
     description: 'We power global brands to create content that moves',
     url: '',
     img_url: '/XRP/FutureVerse.png',
-    position: { x: 150, y: 150 },
+    position: { x: -121.35, y: 88.2 },
     orbit: 'inner'
   },
   {
@@ -51,7 +51,16 @@ const projects: ProjectCard[] = [
     description: 'Modernize your financial infrastructure with Ripple',
     url: '',
     img_url: '/XRP/Ripple.png',
-    position: { x: -150, y: 150 },
+    position: { x: -121.35, y: -88.2 },
+    orbit: 'inner'
+  },
+  {
+    id: 'sth',
+    title: 'Ripple',
+    description: 'Modernize your financial infrastructure with Ripple',
+    url: '',
+    img_url: '/XRP/Ripple.png',
+    position: { x: 46.35, y: -142.7 },
     orbit: 'inner'
   },
   {
@@ -60,7 +69,7 @@ const projects: ProjectCard[] = [
     description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
     url: '',
     img_url: '/XRP/XAO DAO.png',
-    position: { x: -250, y: 0 },
+    position: { x: 250, y: 0 },
     orbit: 'outer'
   },
   {
@@ -69,7 +78,7 @@ const projects: ProjectCard[] = [
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
     url: '',
     img_url: '/XRP/Flare Network.png',
-    position: { x: 250, y: 0 },
+    position: { x: 77.25, y: 238.5 },
     orbit: 'outer'
   },
   {
@@ -78,7 +87,7 @@ const projects: ProjectCard[] = [
     description: 'We power global brands to create content that moves',
     url: '',
     img_url: '/XRP/FutureVerse.png',
-    position: { x: 0, y: -250 },
+    position: { x: -202.25, y: 147.0 },
     orbit: 'outer'
   },
   {
@@ -87,7 +96,16 @@ const projects: ProjectCard[] = [
     description: 'Modernize your financial infrastructure with Ripple',
     url: '',
     img_url: '/XRP/Ripple.png',
-    position: { x: 0, y: 250 },
+    position: { x: -202.25, y: -147.0 },
+    orbit: 'outer'
+  }
+  {
+    id: 'sth-1',
+    title: 'Ripple',
+    description: 'Modernize your financial infrastructure with Ripple',
+    url: '',
+    img_url: '/XRP/Ripple.png',
+    position: { x: 77.25, y: -238.5 },
     orbit: 'outer'
   }
 ]
