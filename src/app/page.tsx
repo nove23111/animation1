@@ -169,6 +169,10 @@ export default function Home() {
         >
           <motion.div
             className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50 overflow-hidden"
+            style={{
+              boxShadow: "0 0 43.615px 0 rgba(255, 255, 255, 0.50) inset",
+              filter: "drop-shadow(0 0 148.855px #056FFF)"
+            }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -189,19 +193,59 @@ export default function Home() {
           {/* Orbital Lines */}
           {showOrbits && (
             <>
+              {/* Circle 1 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="absolute border border-blue-500/30 rounded-full"
-                style={{ width: '300px', height: '300px' }}
+                className="absolute rounded-full"
+                style={{
+                  width: "244px",
+                  height: "244px",
+                  flexShrink: 0,
+                  border: "1px solid rgba(255, 255, 255, 0.20)"
+                }}
               />
+              {/* Circle 2 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                className="absolute border border-blue-500/20 rounded-full"
-                style={{ width: '500px', height: '500px' }}
+                className="absolute rounded-full"
+                style={{
+                  width: "368px",
+                  height: "368px",
+                  flexShrink: 0,
+                  border: "1px solid rgba(255, 255, 255, 0.20)"
+                }}
+              />
+              {/* Circle 3 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                className="absolute rounded-full"
+                style={{
+                  width: "624px",
+                  height: "624px",
+                  flexShrink: 0,
+                  border: "1px solid rgba(255, 255, 255, 0.20)"
+                }}
+              />
+              {/* Circle 4 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                className="absolute rounded-full"
+                style={{
+                  width: "744px",
+                  height: "744px",
+                  flexShrink: 0,
+                  opacity: 0.1,
+                  background: "#056FFF",
+                  filter: "blur(100px)"
+                }}
               />
             </>
           )}
@@ -209,31 +253,44 @@ export default function Home() {
           {/* Orbital Dots */}
           {showOrbits && (
             <>
+              {/* Dots on Circle 1 (radius = 244/2 = 122px) */}
               {[0, 90, 180, 270].map((angle, index) => (
                 <motion.div
-                  key={`inner-dot-${index}`}
+                  key={`circle1-dot-${index}`}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 1.5 + index * 0.1 }}
-                  className="absolute w-2 h-2 bg-blue-500/60 rounded-full"
+                  transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
+                  className="absolute rounded-full"
                   style={{
-                    left: `calc(50% + ${150 * Math.cos((angle * Math.PI) / 180)}px)`,
-                    top: `calc(50% + ${150 * Math.sin((angle * Math.PI) / 180)}px)`,
-                    transform: 'translate(-50%, -50%)'
+                    width: "16px",
+                    height: "16px",
+                    flexShrink: 0,
+                    background: "rgba(255, 255, 255, 0.20)",
+                    border: "1px solid rgba(255, 255, 255, 0.20)",
+                    left: `calc(50% + ${122 * Math.cos((angle * Math.PI) / 180)}px)`,
+                    top: `calc(50% + ${122 * Math.sin((angle * Math.PI) / 180)}px)`,
+                    transform: "translate(-50%, -50%)"
                   }}
                 />
               ))}
+
+              {/* Dots on Circle 2 (radius = 368/2 = 184px) */}
               {[45, 135, 225, 315].map((angle, index) => (
                 <motion.div
-                  key={`outer-dot-${index}`}
+                  key={`circle2-dot-${index}`}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 1.7 + index * 0.1 }}
-                  className="absolute w-2 h-2 bg-blue-500/40 rounded-full"
+                  transition={{ duration: 0.4, delay: 1.5 + index * 0.1 }}
+                  className="absolute rounded-full"
                   style={{
-                    left: `calc(50% + ${250 * Math.cos((angle * Math.PI) / 180)}px)`,
-                    top: `calc(50% + ${250 * Math.sin((angle * Math.PI) / 180)}px)`,
-                    transform: 'translate(-50%, -50%)'
+                    width: "16px",
+                    height: "16px",
+                    flexShrink: 0,
+                    background: "rgba(255, 255, 255, 0.20)",
+                    border: "1px solid rgba(255, 255, 255, 0.20)",
+                    left: `calc(50% + ${184 * Math.cos((angle * Math.PI) / 180)}px)`,
+                    top: `calc(50% + ${184 * Math.sin((angle * Math.PI) / 180)}px)`,
+                    transform: "translate(-50%, -50%)"
                   }}
                 />
               ))}
