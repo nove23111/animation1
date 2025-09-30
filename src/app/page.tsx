@@ -28,12 +28,21 @@ const projects: ProjectCard[] = [
     orbit: 'inner'
   },
   {
+    id: 'xaman',
+    title: 'Xaman',
+    description: 'The Leading Self-Custody Wallet. Secure Your XRP with Confidence.',
+    url: '',
+    img_url: '/XRP/Xaman.png',
+    position: { x: 77.25, y: 238.5 },
+    orbit: 'inner'
+  },
+  {
     id: 'flare-network',
     title: 'Flare Network',
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
     url: '',
     img_url: '/XRP/Flare Network.png',
-    position: { x: 77.25, y: 238.5 },
+    position: { x: -202.25, y: 147.0 },
     orbit: 'inner'
   },
   {
@@ -42,7 +51,7 @@ const projects: ProjectCard[] = [
     description: 'We power global brands to create content that moves',
     url: '',
     img_url: '/XRP/FutureVerse.png',
-    position: { x: -202.25, y: 147.0 },
+    position: { x: -202.25, y: -147.0 },
     orbit: 'inner'
   },
   {
@@ -51,60 +60,51 @@ const projects: ProjectCard[] = [
     description: 'Modernize your financial infrastructure with Ripple',
     url: '',
     img_url: '/XRP/Ripple.png',
-    position: { x: -202.25, y: -147.0 },
-    orbit: 'inner'
-  },
-  {
-    id: 'sth',
-    title: 'Ripple',
-    description: 'Modernize your financial infrastructure with Ripple',
-    url: '',
-    img_url: '/XRP/Ripple.png',
     position: { x: 77.25, y: -238.5 },
     orbit: 'inner'
   },
   {
-    id: 'xao-dao-1',
-    title: 'XAO DAO',
-    description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
+    id: 'root-network',
+    title: 'Root Network',
+    description: "Revolutionary AI and metaverse technologies.",
     url: '',
-    img_url: '/XRP/XAO DAO.png',
+    img_url: '/XRP/Root Network.png',
     position: { x: 250, y: 0 },
     orbit: 'outer'
   },
   {
-    id: 'flare-network-1',
-    title: 'Flare Network',
-    description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
+    id: 'axelar',
+    title: 'Axelar',
+    description: 'Tokenize, trade, and earn yield through a single development platform.',
     url: '',
-    img_url: '/XRP/Flare Network.png',
+    img_url: '/XRP/Axelar.png',
     position: { x: 77.25, y: 238.5 },
     orbit: 'outer'
   },
   {
-    id: 'future-verse-1',
-    title: 'FutureVerse',
-    description: 'We power global brands to create content that moves',
+    id: 'xrp-toolkit',
+    title: 'XRP Toolkit',
+    description: 'XRP Toolkit is a platform for managing crypto assets on the XRPL.',
     url: '',
-    img_url: '/XRP/FutureVerse.png',
+    img_url: '/XRP/XRP Toolkit.png',
     position: { x: -202.25, y: 147.0 },
     orbit: 'outer'
   },
   {
-    id: 'ripple-1',
-    title: 'Ripple',
-    description: 'Modernize your financial infrastructure with Ripple',
+    id: 'digital-wealth-partners',
+    title: 'Digital Wealth Partners',
+    description: 'Unlock the Future of Wealth with Digital Assets',
     url: '',
-    img_url: '/XRP/Ripple.png',
+    img_url: '/XRP/Digital Wealth Partners.png',
     position: { x: -202.25, y: -147.0 },
     orbit: 'outer'
   },
   {
-    id: 'sth-1',
-    title: 'Ripple',
-    description: 'Modernize your financial infrastructure with Ripple',
+    id: 'spendthebits',
+    title: 'SpendTheBits',
+    description: 'Seamless, secure, and instant payment solution that bridges the gap between traditional and digital currencies',
     url: '',
-    img_url: '/XRP/Ripple.png',
+    img_url: '/XRP/SpendTheBits.png',
     position: { x: 77.25, y: -238.5 },
     orbit: 'outer'
   }
