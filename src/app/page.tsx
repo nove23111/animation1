@@ -98,7 +98,7 @@ const projects: ProjectCard[] = [
     img_url: '/XRP/Ripple.png',
     position: { x: -202.25, y: -147.0 },
     orbit: 'outer'
-  }
+  },
   {
     id: 'sth-1',
     title: 'Ripple',
