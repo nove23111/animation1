@@ -188,12 +188,13 @@ export default function Home() {
         <motion.div
           animate={{ rotate: rotation }}
           transition={{ duration: 0, ease: "linear" }}
-          className="absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0"
+          style={{ pointerEvents: "none" }} // để không chặn click lên card
         >
-          {/* Orbital Lines */}
           {showOrbits && (
             <>
-              {/* Circle 1 */}
+              {/* ===== Orbital Lines (centered without transform) ===== */}
+              {/* Circle 1: 244x244, border 1px rgba(255,255,255,.2) */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -202,11 +203,15 @@ export default function Home() {
                 style={{
                   width: "244px",
                   height: "244px",
-                  flexShrink: 0,
+                  left: "50%",
+                  top: "50%",
+                  marginLeft: "-122px", // -width/2
+                  marginTop: "-122px",  // -height/2
                   border: "1px solid rgba(255, 255, 255, 0.20)"
                 }}
               />
-              {/* Circle 2 */}
+
+              {/* Circle 2: 368x368 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -215,11 +220,15 @@ export default function Home() {
                 style={{
                   width: "368px",
                   height: "368px",
-                  flexShrink: 0,
+                  left: "50%",
+                  top: "50%",
+                  marginLeft: "-184px",
+                  marginTop: "-184px",
                   border: "1px solid rgba(255, 255, 255, 0.20)"
                 }}
               />
-              {/* Circle 3 */}
+
+              {/* Circle 3: 624x624 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -228,75 +237,94 @@ export default function Home() {
                 style={{
                   width: "624px",
                   height: "624px",
-                  flexShrink: 0,
+                  left: "50%",
+                  top: "50%",
+                  marginLeft: "-312px",
+                  marginTop: "-312px",
                   border: "1px solid rgba(255, 255, 255, 0.20)"
                 }}
               />
-              {/* Circle 4 */}
+
+              {/* Circle 4: 744x744, blue blur */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 0.1 }}
+                animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 className="absolute rounded-full"
                 style={{
                   width: "744px",
                   height: "744px",
-                  flexShrink: 0,
+                  left: "50%",
+                  top: "50%",
+                  marginLeft: "-372px",
+                  marginTop: "-372px",
                   opacity: 0.1,
                   background: "#056FFF",
                   filter: "blur(100px)"
                 }}
               />
-            </>
-          )}
 
-          {/* Orbital Dots */}
-          {showOrbits && (
-            <>
-              {/* Dots on Circle 1 (radius = 244/2 = 122px) */}
-              {[0, 90, 180, 270].map((angle, index) => (
-                <motion.div
-                  key={`circle1-dot-${index}`}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
-                  className="absolute rounded-full"
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    flexShrink: 0,
-                    background: "rgba(255, 255, 255, 0.20)",
-                    border: "1px solid rgba(255, 255, 255, 0.20)",
-                    left: `calc(50% + ${122 * Math.cos((angle * Math.PI) / 180)}px)`,
-                    top: `calc(50% + ${122 * Math.sin((angle * Math.PI) / 180)}px)`,
-                    transform: "translate(-50%, -50%)"
-                  }}
-                />
-              ))}
+              {/* ===== Orbital Dots (no transform conflict) ===== */}
+              {(() => {
+                const DOT = 16; // 16x16
+                const R1 = 244 / 2; // 122
+                const R2 = 368 / 2; // 184
 
-              {/* Dots on Circle 2 (radius = 368/2 = 184px) */}
-              {[45, 135, 225, 315].map((angle, index) => (
-                <motion.div
-                  key={`circle2-dot-${index}`}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 1.5 + index * 0.1 }}
-                  className="absolute rounded-full"
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                    flexShrink: 0,
-                    background: "rgba(255, 255, 255, 0.20)",
-                    border: "1px solid rgba(255, 255, 255, 0.20)",
-                    left: `calc(50% + ${184 * Math.cos((angle * Math.PI) / 180)}px)`,
-                    top: `calc(50% + ${184 * Math.sin((angle * Math.PI) / 180)}px)`,
-                    transform: "translate(-50%, -50%)"
-                  }}
-                />
-              ))}
+                // Helper: compute left/top without translate(-50%, -50%)
+                const pos = (r: number, angleDeg: number) => {
+                  const rad = (angleDeg * Math.PI) / 180;
+                  const x = r * Math.cos(rad);
+                  const y = r * Math.sin(rad);
+                  return {
+                    left: `calc(50% + ${x}px - ${DOT / 2}px)`,
+                    top: `calc(50% + ${y}px - ${DOT / 2}px)`
+                  };
+                };
+
+                return (
+                  <>
+                    {/* Dots on Circle 1 */}
+                    {[0, 90, 180, 270].map((angle, index) => (
+                      <motion.div
+                        key={`c1-dot-${index}`}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 1 + index * 0.1 }}
+                        className="absolute rounded-full"
+                        style={{
+                          width: `${DOT}px`,
+                          height: `${DOT}px`,
+                          background: "rgba(255, 255, 255, 0.20)",
+                          border: "1px solid rgba(255, 255, 255, 0.20)",
+                          ...pos(R1, angle)
+                        }}
+                      />
+                    ))}
+
+                    {/* Dots on Circle 2 */}
+                    {[45, 135, 225, 315].map((angle, index) => (
+                      <motion.div
+                        key={`c2-dot-${index}`}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 1.5 + index * 0.1 }}
+                        className="absolute rounded-full"
+                        style={{
+                          width: `${DOT}px`,
+                          height: `${DOT}px`,
+                          background: "rgba(255, 255, 255, 0.20)",
+                          border: "1px solid rgba(255, 255, 255, 0.20)",
+                          ...pos(R2, angle)
+                        }}
+                      />
+                    ))}
+                  </>
+                );
+              })()}
             </>
           )}
         </motion.div>
+
 
         {/* Project Cards (Outside rotation container) */}
         {showCards && getCurrentCards().map((project, index) => {
