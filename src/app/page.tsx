@@ -171,7 +171,7 @@ export default function Home() {
     if (currentCardSet === 0) {
       return projects.slice(0, 5) // First 4 cards
     } else {
-      return projects.slice(5, 9) // Second 4 cards
+      return projects.slice(5, 10) // Second 4 cards
     }
   }
 
