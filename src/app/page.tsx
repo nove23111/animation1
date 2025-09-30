@@ -235,16 +235,16 @@ export default function Home() {
               {/* Circle 4 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 0.05 }}
+                animate={{ scale: 1, opacity: 0.1 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                 className="absolute rounded-full"
                 style={{
                   width: "744px",
                   height: "744px",
                   flexShrink: 0,
-                  opacity: 0.01,
+                  opacity: 0.1,
                   background: "#056FFF",
-                  filter: "blur(200px)"
+                  filter: "blur(100px)"
                 }}
               />
             </>
