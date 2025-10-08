@@ -176,7 +176,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen bg-transparent overflow-hidden">
       <div className="relative w-full max-w-4xl h-[600px] flex items-center justify-center">
         {/* Central Logo */}
         <motion.div
