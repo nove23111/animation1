@@ -116,7 +116,13 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html, body {
-    @apply bg-transparent text-foreground;
+
+  html,
+  body,
+  #__next,
+  main {
+    background: transparent !important;
+    overflow: visible !important;
+    color: var(--foreground);
   }
 }
