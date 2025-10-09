@@ -22,7 +22,7 @@ const projects: ProjectCard[] = [
     id: 'xao-dao',
     title: 'XAO DAO',
     description: "The world's first Decentralized Autonomous Organization for the XRP Ledger.",
-    url: '',
+    url: 'https://www.xaodao.io/',
     img_url: '/XRP/XAO DAO.png',
     position: { x: 250, y: 0 },
     orbit: 'inner'
@@ -31,7 +31,7 @@ const projects: ProjectCard[] = [
     id: 'xaman',
     title: 'Xaman',
     description: 'The Leading Self-Custody Wallet. Secure Your XRP with Confidence.',
-    url: '',
+    url: 'https://xaman.app/',
     img_url: '/XRP/Xaman.png',
     position: { x: 77.25, y: 238.5 },
     orbit: 'inner'
@@ -40,7 +40,7 @@ const projects: ProjectCard[] = [
     id: 'flare-network',
     title: 'Flare Network',
     description: 'Flare Network enables DeFi, smart contracts, and seamless multi-chain blockchain interoperability.',
-    url: '',
+    url: 'https://flare.network/',
     img_url: '/XRP/Flare Network.png',
     position: { x: -202.25, y: 147.0 },
     orbit: 'inner'
@@ -49,7 +49,7 @@ const projects: ProjectCard[] = [
     id: 'future-verse',
     title: 'FutureVerse',
     description: 'We power global brands to create content that moves',
-    url: '',
+    url: 'https://www.futureverse.com/',
     img_url: '/XRP/FutureVerse.png',
     position: { x: -202.25, y: -147.0 },
     orbit: 'inner'
@@ -58,7 +58,7 @@ const projects: ProjectCard[] = [
     id: 'ripple',
     title: 'Ripple',
     description: 'Modernize your financial infrastructure with Ripple',
-    url: '',
+    url: 'https://ripple.com/',
     img_url: '/XRP/Ripple.png',
     position: { x: 77.25, y: -238.5 },
     orbit: 'inner'
@@ -67,7 +67,7 @@ const projects: ProjectCard[] = [
     id: 'root-network',
     title: 'Root Network',
     description: "Revolutionary AI and metaverse technologies.",
-    url: '',
+    url: 'https://www.therootnetwork.com/',
     img_url: '/XRP/Root Network.png',
     position: { x: 250, y: 0 },
     orbit: 'outer'
@@ -76,7 +76,7 @@ const projects: ProjectCard[] = [
     id: 'axelar',
     title: 'Axelar',
     description: 'Tokenize, trade, and earn yield through a single development platform.',
-    url: '',
+    url: 'https://www.axelar.network/',
     img_url: '/XRP/Axelar.png',
     position: { x: 77.25, y: 238.5 },
     orbit: 'outer'
@@ -85,7 +85,7 @@ const projects: ProjectCard[] = [
     id: 'xrp-toolkit',
     title: 'XRP Toolkit',
     description: 'XRP Toolkit is a platform for managing crypto assets on the XRPL.',
-    url: '',
+    url: 'https://www.xrptoolkit.com/',
     img_url: '/XRP/XRP Toolkit.png',
     position: { x: -202.25, y: 147.0 },
     orbit: 'outer'
@@ -94,7 +94,7 @@ const projects: ProjectCard[] = [
     id: 'digital-wealth-partners',
     title: 'Digital Wealth Partners',
     description: 'Unlock the Future of Wealth with Digital Assets',
-    url: '',
+    url: 'https://www.digitalwealthpartners.net/',
     img_url: '/XRP/Digital Wealth Partners.png',
     position: { x: -202.25, y: -147.0 },
     orbit: 'outer'
@@ -103,7 +103,7 @@ const projects: ProjectCard[] = [
     id: 'spendthebits',
     title: 'SpendTheBits',
     description: 'Seamless, secure, and instant payment solution that bridges the gap between traditional and digital currencies',
-    url: '',
+    url: 'https://spendthebits.com/',
     img_url: '/XRP/SpendTheBits.png',
     position: { x: 77.25, y: -238.5 },
     orbit: 'outer'
